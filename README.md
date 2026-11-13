@@ -4,15 +4,6 @@ Discrete-event simulation of a general Selective-Repeat ARQ link with send
 window `Ws` and receive window `Wr`, written on the same `simlib` library as
 the earlier labs. `Wr = 1` gives GBN and `Ws = Wr = 1` gives S&W.
 
-## Before you submit
-
-Set `STUDENT_ID` in `simparameters.h` to a group member's student number (it
-is a placeholder, `400000000`, right now), then re-run so the results use it:
-
-```bash
-make run
-```
-
 ## Running
 
 ```bash

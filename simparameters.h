@@ -43,9 +43,7 @@
 
 /*
  * Comma separated list of random seeds to run. The same seeds are used for
- * every protocol.
- *
- * >>> REPLACE STUDENT_ID WITH THE STUDENT NUMBER OF A GROUP MEMBER. <<<
+ * every protocol. STUDENT_ID is the student number of a group member.
  */
 
 #define STUDENT_ID 400435085
