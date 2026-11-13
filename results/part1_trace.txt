@@ -1,4 +1,4 @@
-S&W: Ws = 1, Wr = 1, pd = 0, pa = 0, timeout = 15 ms, 6 packets, seed = 400000000
+S&W: Ws = 1, Wr = 1, pd = 0, pa = 0, timeout = 15 ms, 6 packets, seed = 400435085
 
    0.000 ms  SENDER   transmits new packet 0 (send window 0 to 0)
    6.000 ms  RECEIVER packet 0 accepted (receive window 0 to 0)
@@ -35,7 +35,7 @@ S&W: Ws = 1, Wr = 1, pd = 0, pa = 0, timeout = 15 ms, 6 packets, seed = 40000000
 Completion time = 66.000 ms, transmission attempts per packet = 1.000
 
 
-GBN: Ws = 4, Wr = 1, pd = 0, pa = 0, timeout = 15 ms, 6 packets, seed = 400000000
+GBN: Ws = 4, Wr = 1, pd = 0, pa = 0, timeout = 15 ms, 6 packets, seed = 400435085
 
    0.000 ms  SENDER   transmits new packet 0 (send window 0 to 3)
    1.000 ms  SENDER   transmits new packet 1 (send window 0 to 3)
@@ -72,7 +72,7 @@ GBN: Ws = 4, Wr = 1, pd = 0, pa = 0, timeout = 15 ms, 6 packets, seed = 40000000
 Completion time = 23.000 ms, transmission attempts per packet = 1.000
 
 
-SR: Ws = 4, Wr = 4, pd = 0, pa = 0, timeout = 15 ms, 6 packets, seed = 400000000
+SR: Ws = 4, Wr = 4, pd = 0, pa = 0, timeout = 15 ms, 6 packets, seed = 400435085
 
    0.000 ms  SENDER   transmits new packet 0 (send window 0 to 3)
    1.000 ms  SENDER   transmits new packet 1 (send window 0 to 3)
@@ -109,7 +109,7 @@ SR: Ws = 4, Wr = 4, pd = 0, pa = 0, timeout = 15 ms, 6 packets, seed = 400000000
 Completion time = 23.000 ms, transmission attempts per packet = 1.000
 
 
-S&W: Ws = 1, Wr = 1, pd = 0.5, pa = 0.5, timeout = 15 ms, 6 packets, seed = 400000000
+S&W: Ws = 1, Wr = 1, pd = 0.5, pa = 0.5, timeout = 15 ms, 6 packets, seed = 400435085
 
    0.000 ms  SENDER   transmits new packet 0 (send window 0 to 0)
    6.000 ms  RECEIVER packet 0 is in ERROR, discarded, no ACK
@@ -118,11 +118,12 @@ S&W: Ws = 1, Wr = 1, pd = 0.5, pa = 0.5, timeout = 15 ms, 6 packets, seed = 4000
   22.000 ms  RECEIVER packet 0 is in ERROR, discarded, no ACK
   32.000 ms  SENDER   timeout of packet 0 (0 outstanding packets beyond the receive window will also be resent)
   32.000 ms  SENDER   retransmits packet 0
-  38.000 ms  RECEIVER packet 0 is in ERROR, discarded, no ACK
+  38.000 ms  RECEIVER packet 0 accepted (receive window 0 to 0)
+  38.000 ms  RECEIVER packet 0 delivered
+  38.000 ms  RECEIVER sends ACK (RN=1, seq=0), ACK is LOST
   48.000 ms  SENDER   timeout of packet 0 (0 outstanding packets beyond the receive window will also be resent)
   48.000 ms  SENDER   retransmits packet 0
-  54.000 ms  RECEIVER packet 0 accepted (receive window 0 to 0)
-  54.000 ms  RECEIVER packet 0 delivered
+  54.000 ms  RECEIVER packet 0 is a duplicate, discarded
   54.000 ms  RECEIVER sends ACK (RN=1, seq=0)
   59.000 ms  SENDER   receives ACK (RN=1, seq=0), send window now 1 to 1
   59.000 ms  SENDER   transmits new packet 1 (send window 1 to 1)
@@ -132,85 +133,56 @@ S&W: Ws = 1, Wr = 1, pd = 0.5, pa = 0.5, timeout = 15 ms, 6 packets, seed = 4000
   81.000 ms  RECEIVER packet 1 is in ERROR, discarded, no ACK
   91.000 ms  SENDER   timeout of packet 1 (0 outstanding packets beyond the receive window will also be resent)
   91.000 ms  SENDER   retransmits packet 1
-  97.000 ms  RECEIVER packet 1 is in ERROR, discarded, no ACK
- 107.000 ms  SENDER   timeout of packet 1 (0 outstanding packets beyond the receive window will also be resent)
- 107.000 ms  SENDER   retransmits packet 1
- 113.000 ms  RECEIVER packet 1 accepted (receive window 1 to 1)
- 113.000 ms  RECEIVER packet 1 delivered
- 113.000 ms  RECEIVER sends ACK (RN=2, seq=1)
- 118.000 ms  SENDER   receives ACK (RN=2, seq=1), send window now 2 to 2
- 118.000 ms  SENDER   transmits new packet 2 (send window 2 to 2)
- 124.000 ms  RECEIVER packet 2 accepted (receive window 2 to 2)
- 124.000 ms  RECEIVER packet 2 delivered
- 124.000 ms  RECEIVER sends ACK (RN=3, seq=2), ACK is LOST
+  97.000 ms  RECEIVER packet 1 accepted (receive window 1 to 1)
+  97.000 ms  RECEIVER packet 1 delivered
+  97.000 ms  RECEIVER sends ACK (RN=2, seq=1)
+ 102.000 ms  SENDER   receives ACK (RN=2, seq=1), send window now 2 to 2
+ 102.000 ms  SENDER   transmits new packet 2 (send window 2 to 2)
+ 108.000 ms  RECEIVER packet 2 is in ERROR, discarded, no ACK
+ 118.000 ms  SENDER   timeout of packet 2 (0 outstanding packets beyond the receive window will also be resent)
+ 118.000 ms  SENDER   retransmits packet 2
+ 124.000 ms  RECEIVER packet 2 is in ERROR, discarded, no ACK
  134.000 ms  SENDER   timeout of packet 2 (0 outstanding packets beyond the receive window will also be resent)
  134.000 ms  SENDER   retransmits packet 2
- 140.000 ms  RECEIVER packet 2 is a duplicate, discarded
- 140.000 ms  RECEIVER sends ACK (RN=3, seq=2)
- 145.000 ms  SENDER   receives ACK (RN=3, seq=2), send window now 3 to 3
- 145.000 ms  SENDER   transmits new packet 3 (send window 3 to 3)
- 151.000 ms  RECEIVER packet 3 is in ERROR, discarded, no ACK
- 161.000 ms  SENDER   timeout of packet 3 (0 outstanding packets beyond the receive window will also be resent)
- 161.000 ms  SENDER   retransmits packet 3
- 167.000 ms  RECEIVER packet 3 is in ERROR, discarded, no ACK
+ 140.000 ms  RECEIVER packet 2 accepted (receive window 2 to 2)
+ 140.000 ms  RECEIVER packet 2 delivered
+ 140.000 ms  RECEIVER sends ACK (RN=3, seq=2), ACK is LOST
+ 150.000 ms  SENDER   timeout of packet 2 (0 outstanding packets beyond the receive window will also be resent)
+ 150.000 ms  SENDER   retransmits packet 2
+ 156.000 ms  RECEIVER packet 2 is a duplicate, discarded
+ 156.000 ms  RECEIVER sends ACK (RN=3, seq=2)
+ 161.000 ms  SENDER   receives ACK (RN=3, seq=2), send window now 3 to 3
+ 161.000 ms  SENDER   transmits new packet 3 (send window 3 to 3)
+ 167.000 ms  RECEIVER packet 3 accepted (receive window 3 to 3)
+ 167.000 ms  RECEIVER packet 3 delivered
+ 167.000 ms  RECEIVER sends ACK (RN=4, seq=3), ACK is LOST
  177.000 ms  SENDER   timeout of packet 3 (0 outstanding packets beyond the receive window will also be resent)
  177.000 ms  SENDER   retransmits packet 3
- 183.000 ms  RECEIVER packet 3 is in ERROR, discarded, no ACK
- 193.000 ms  SENDER   timeout of packet 3 (0 outstanding packets beyond the receive window will also be resent)
- 193.000 ms  SENDER   retransmits packet 3
- 199.000 ms  RECEIVER packet 3 accepted (receive window 3 to 3)
- 199.000 ms  RECEIVER packet 3 delivered
- 199.000 ms  RECEIVER sends ACK (RN=4, seq=3), ACK is LOST
- 209.000 ms  SENDER   timeout of packet 3 (0 outstanding packets beyond the receive window will also be resent)
- 209.000 ms  SENDER   retransmits packet 3
- 215.000 ms  RECEIVER packet 3 is in ERROR, discarded, no ACK
- 225.000 ms  SENDER   timeout of packet 3 (0 outstanding packets beyond the receive window will also be resent)
- 225.000 ms  SENDER   retransmits packet 3
- 231.000 ms  RECEIVER packet 3 is a duplicate, discarded
- 231.000 ms  RECEIVER sends ACK (RN=4, seq=3), ACK is LOST
- 241.000 ms  SENDER   timeout of packet 3 (0 outstanding packets beyond the receive window will also be resent)
- 241.000 ms  SENDER   retransmits packet 3
- 247.000 ms  RECEIVER packet 3 is in ERROR, discarded, no ACK
- 257.000 ms  SENDER   timeout of packet 3 (0 outstanding packets beyond the receive window will also be resent)
- 257.000 ms  SENDER   retransmits packet 3
- 263.000 ms  RECEIVER packet 3 is in ERROR, discarded, no ACK
- 273.000 ms  SENDER   timeout of packet 3 (0 outstanding packets beyond the receive window will also be resent)
- 273.000 ms  SENDER   retransmits packet 3
- 279.000 ms  RECEIVER packet 3 is a duplicate, discarded
- 279.000 ms  RECEIVER sends ACK (RN=4, seq=3)
- 284.000 ms  SENDER   receives ACK (RN=4, seq=3), send window now 4 to 4
- 284.000 ms  SENDER   transmits new packet 4 (send window 4 to 4)
- 290.000 ms  RECEIVER packet 4 accepted (receive window 4 to 4)
- 290.000 ms  RECEIVER packet 4 delivered
- 290.000 ms  RECEIVER sends ACK (RN=5, seq=4), ACK is LOST
- 300.000 ms  SENDER   timeout of packet 4 (0 outstanding packets beyond the receive window will also be resent)
- 300.000 ms  SENDER   retransmits packet 4
- 306.000 ms  RECEIVER packet 4 is a duplicate, discarded
- 306.000 ms  RECEIVER sends ACK (RN=5, seq=4)
- 311.000 ms  SENDER   receives ACK (RN=5, seq=4), send window now 5 to 5
- 311.000 ms  SENDER   transmits new packet 5 (send window 5 to 5)
- 317.000 ms  RECEIVER packet 5 is in ERROR, discarded, no ACK
- 327.000 ms  SENDER   timeout of packet 5 (0 outstanding packets beyond the receive window will also be resent)
- 327.000 ms  SENDER   retransmits packet 5
- 333.000 ms  RECEIVER packet 5 is in ERROR, discarded, no ACK
- 343.000 ms  SENDER   timeout of packet 5 (0 outstanding packets beyond the receive window will also be resent)
- 343.000 ms  SENDER   retransmits packet 5
- 349.000 ms  RECEIVER packet 5 is in ERROR, discarded, no ACK
- 359.000 ms  SENDER   timeout of packet 5 (0 outstanding packets beyond the receive window will also be resent)
- 359.000 ms  SENDER   retransmits packet 5
- 365.000 ms  RECEIVER packet 5 is in ERROR, discarded, no ACK
- 375.000 ms  SENDER   timeout of packet 5 (0 outstanding packets beyond the receive window will also be resent)
- 375.000 ms  SENDER   retransmits packet 5
- 381.000 ms  RECEIVER packet 5 accepted (receive window 5 to 5)
- 381.000 ms  RECEIVER packet 5 delivered
- 381.000 ms  RECEIVER sends ACK (RN=6, seq=5)
- 386.000 ms  SENDER   receives ACK (RN=6, seq=5), send window now 6 to 6
- 386.000 ms  SENDER   transfer complete
+ 183.000 ms  RECEIVER packet 3 is a duplicate, discarded
+ 183.000 ms  RECEIVER sends ACK (RN=4, seq=3)
+ 188.000 ms  SENDER   receives ACK (RN=4, seq=3), send window now 4 to 4
+ 188.000 ms  SENDER   transmits new packet 4 (send window 4 to 4)
+ 194.000 ms  RECEIVER packet 4 is in ERROR, discarded, no ACK
+ 204.000 ms  SENDER   timeout of packet 4 (0 outstanding packets beyond the receive window will also be resent)
+ 204.000 ms  SENDER   retransmits packet 4
+ 210.000 ms  RECEIVER packet 4 is in ERROR, discarded, no ACK
+ 220.000 ms  SENDER   timeout of packet 4 (0 outstanding packets beyond the receive window will also be resent)
+ 220.000 ms  SENDER   retransmits packet 4
+ 226.000 ms  RECEIVER packet 4 accepted (receive window 4 to 4)
+ 226.000 ms  RECEIVER packet 4 delivered
+ 226.000 ms  RECEIVER sends ACK (RN=5, seq=4)
+ 231.000 ms  SENDER   receives ACK (RN=5, seq=4), send window now 5 to 5
+ 231.000 ms  SENDER   transmits new packet 5 (send window 5 to 5)
+ 237.000 ms  RECEIVER packet 5 accepted (receive window 5 to 5)
+ 237.000 ms  RECEIVER packet 5 delivered
+ 237.000 ms  RECEIVER sends ACK (RN=6, seq=5)
+ 242.000 ms  SENDER   receives ACK (RN=6, seq=5), send window now 6 to 6
+ 242.000 ms  SENDER   transfer complete
 
-Completion time = 386.000 ms, transmission attempts per packet = 4.333
+Completion time = 242.000 ms, transmission attempts per packet = 2.833
 
 
-GBN: Ws = 4, Wr = 1, pd = 0.5, pa = 0.5, timeout = 15 ms, 6 packets, seed = 400000000
+GBN: Ws = 4, Wr = 1, pd = 0.5, pa = 0.5, timeout = 15 ms, 6 packets, seed = 400435085
 
    0.000 ms  SENDER   transmits new packet 0 (send window 0 to 3)
    1.000 ms  SENDER   transmits new packet 1 (send window 0 to 3)
@@ -218,7 +190,8 @@ GBN: Ws = 4, Wr = 1, pd = 0.5, pa = 0.5, timeout = 15 ms, 6 packets, seed = 4000
    3.000 ms  SENDER   transmits new packet 3 (send window 0 to 3)
    6.000 ms  RECEIVER packet 0 is in ERROR, discarded, no ACK
    7.000 ms  RECEIVER packet 1 is in ERROR, discarded, no ACK
-   8.000 ms  RECEIVER packet 2 is in ERROR, discarded, no ACK
+   8.000 ms  RECEIVER packet 2 is outside the receive window 0 to 0, discarded
+   8.000 ms  RECEIVER sends ACK (RN=0, seq=-1), ACK is LOST
    9.000 ms  RECEIVER packet 3 is outside the receive window 0 to 0, discarded
    9.000 ms  RECEIVER sends ACK (RN=0, seq=-1)
   14.000 ms  SENDER   receives ACK (RN=0, seq=-1), send window now 0 to 3
@@ -229,77 +202,154 @@ GBN: Ws = 4, Wr = 1, pd = 0.5, pa = 0.5, timeout = 15 ms, 6 packets, seed = 4000
   19.000 ms  SENDER   retransmits packet 3
   22.000 ms  RECEIVER packet 0 is in ERROR, discarded, no ACK
   23.000 ms  RECEIVER packet 1 is in ERROR, discarded, no ACK
-  24.000 ms  RECEIVER packet 2 is in ERROR, discarded, no ACK
-  25.000 ms  RECEIVER packet 3 is outside the receive window 0 to 0, discarded
-  25.000 ms  RECEIVER sends ACK (RN=0, seq=-1)
-  30.000 ms  SENDER   receives ACK (RN=0, seq=-1), send window now 0 to 3
+  24.000 ms  RECEIVER packet 2 is outside the receive window 0 to 0, discarded
+  24.000 ms  RECEIVER sends ACK (RN=0, seq=-1)
+  25.000 ms  RECEIVER packet 3 is in ERROR, discarded, no ACK
+  29.000 ms  SENDER   receives ACK (RN=0, seq=-1), send window now 0 to 3
   32.000 ms  SENDER   timeout of packet 0 (3 outstanding packets beyond the receive window will also be resent)
   32.000 ms  SENDER   retransmits packet 0
   33.000 ms  SENDER   retransmits packet 1
   34.000 ms  SENDER   retransmits packet 2
   35.000 ms  SENDER   retransmits packet 3
-  38.000 ms  RECEIVER packet 0 accepted (receive window 0 to 0)
-  38.000 ms  RECEIVER packet 0 delivered
-  38.000 ms  RECEIVER sends ACK (RN=1, seq=0), ACK is LOST
-  39.000 ms  RECEIVER packet 1 accepted (receive window 1 to 1)
-  39.000 ms  RECEIVER packet 1 delivered
-  39.000 ms  RECEIVER sends ACK (RN=2, seq=1)
-  40.000 ms  RECEIVER packet 2 is in ERROR, discarded, no ACK
-  41.000 ms  RECEIVER packet 3 is in ERROR, discarded, no ACK
-  44.000 ms  SENDER   receives ACK (RN=2, seq=1), send window now 2 to 5
-  44.000 ms  SENDER   transmits new packet 4 (send window 2 to 5)
-  45.000 ms  SENDER   transmits new packet 5 (send window 2 to 5)
-  50.000 ms  SENDER   timeout of packet 2 (3 outstanding packets beyond the receive window will also be resent)
+  38.000 ms  RECEIVER packet 0 is in ERROR, discarded, no ACK
+  39.000 ms  RECEIVER packet 1 is outside the receive window 0 to 0, discarded
+  39.000 ms  RECEIVER sends ACK (RN=0, seq=-1), ACK is LOST
+  40.000 ms  RECEIVER packet 2 is outside the receive window 0 to 0, discarded
+  40.000 ms  RECEIVER sends ACK (RN=0, seq=-1)
+  41.000 ms  RECEIVER packet 3 is outside the receive window 0 to 0, discarded
+  41.000 ms  RECEIVER sends ACK (RN=0, seq=-1), ACK is LOST
+  45.000 ms  SENDER   receives ACK (RN=0, seq=-1), send window now 0 to 3
+  48.000 ms  SENDER   timeout of packet 0 (3 outstanding packets beyond the receive window will also be resent)
+  48.000 ms  SENDER   retransmits packet 0
+  49.000 ms  SENDER   retransmits packet 1
   50.000 ms  SENDER   retransmits packet 2
-  50.000 ms  RECEIVER packet 4 is in ERROR, discarded, no ACK
-  51.000 ms  RECEIVER packet 5 is outside the receive window 2 to 2, discarded
-  51.000 ms  RECEIVER sends ACK (RN=2, seq=-1), ACK is LOST
   51.000 ms  SENDER   retransmits packet 3
-  52.000 ms  SENDER   retransmits packet 4
-  53.000 ms  SENDER   retransmits packet 5
+  54.000 ms  RECEIVER packet 0 accepted (receive window 0 to 0)
+  54.000 ms  RECEIVER packet 0 delivered
+  54.000 ms  RECEIVER sends ACK (RN=1, seq=0)
+  55.000 ms  RECEIVER packet 1 is in ERROR, discarded, no ACK
   56.000 ms  RECEIVER packet 2 is in ERROR, discarded, no ACK
-  57.000 ms  RECEIVER packet 3 is outside the receive window 2 to 2, discarded
-  57.000 ms  RECEIVER sends ACK (RN=2, seq=-1), ACK is LOST
-  58.000 ms  RECEIVER packet 4 is in ERROR, discarded, no ACK
-  59.000 ms  RECEIVER packet 5 is in ERROR, discarded, no ACK
-  66.000 ms  SENDER   timeout of packet 2 (3 outstanding packets beyond the receive window will also be resent)
+  57.000 ms  RECEIVER packet 3 is outside the receive window 1 to 1, discarded
+  57.000 ms  RECEIVER sends ACK (RN=1, seq=-1)
+  59.000 ms  SENDER   receives ACK (RN=1, seq=0), send window now 1 to 4
+  59.000 ms  SENDER   transmits new packet 4 (send window 1 to 4)
+  62.000 ms  SENDER   receives ACK (RN=1, seq=-1), send window now 1 to 4
+  65.000 ms  SENDER   timeout of packet 1 (3 outstanding packets beyond the receive window will also be resent)
+  65.000 ms  SENDER   retransmits packet 1
+  65.000 ms  RECEIVER packet 4 is outside the receive window 1 to 1, discarded
+  65.000 ms  RECEIVER sends ACK (RN=1, seq=-1)
   66.000 ms  SENDER   retransmits packet 2
   67.000 ms  SENDER   retransmits packet 3
   68.000 ms  SENDER   retransmits packet 4
-  69.000 ms  SENDER   retransmits packet 5
-  72.000 ms  RECEIVER packet 2 accepted (receive window 2 to 2)
-  72.000 ms  RECEIVER packet 2 delivered
-  72.000 ms  RECEIVER sends ACK (RN=3, seq=2)
-  73.000 ms  RECEIVER packet 3 accepted (receive window 3 to 3)
-  73.000 ms  RECEIVER packet 3 delivered
-  73.000 ms  RECEIVER sends ACK (RN=4, seq=3), ACK is LOST
-  74.000 ms  RECEIVER packet 4 accepted (receive window 4 to 4)
-  74.000 ms  RECEIVER packet 4 delivered
-  74.000 ms  RECEIVER sends ACK (RN=5, seq=4)
-  75.000 ms  RECEIVER packet 5 is in ERROR, discarded, no ACK
-  77.000 ms  SENDER   receives ACK (RN=3, seq=2), send window now 3 to 6
-  79.000 ms  SENDER   receives ACK (RN=5, seq=4), send window now 5 to 8
-  85.000 ms  SENDER   timeout of packet 5 (0 outstanding packets beyond the receive window will also be resent)
+  70.000 ms  SENDER   receives ACK (RN=1, seq=-1), send window now 1 to 4
+  71.000 ms  RECEIVER packet 1 accepted (receive window 1 to 1)
+  71.000 ms  RECEIVER packet 1 delivered
+  71.000 ms  RECEIVER sends ACK (RN=2, seq=1)
+  72.000 ms  RECEIVER packet 2 is in ERROR, discarded, no ACK
+  73.000 ms  RECEIVER packet 3 is in ERROR, discarded, no ACK
+  74.000 ms  RECEIVER packet 4 is in ERROR, discarded, no ACK
+  76.000 ms  SENDER   receives ACK (RN=2, seq=1), send window now 2 to 5
+  76.000 ms  SENDER   transmits new packet 5 (send window 2 to 5)
+  82.000 ms  SENDER   timeout of packet 2 (3 outstanding packets beyond the receive window will also be resent)
+  82.000 ms  SENDER   retransmits packet 2
+  82.000 ms  RECEIVER packet 5 is outside the receive window 2 to 2, discarded
+  82.000 ms  RECEIVER sends ACK (RN=2, seq=-1)
+  83.000 ms  SENDER   retransmits packet 3
+  84.000 ms  SENDER   retransmits packet 4
   85.000 ms  SENDER   retransmits packet 5
+  87.000 ms  SENDER   receives ACK (RN=2, seq=-1), send window now 2 to 5
+  88.000 ms  RECEIVER packet 2 is in ERROR, discarded, no ACK
+  89.000 ms  RECEIVER packet 3 is in ERROR, discarded, no ACK
+  90.000 ms  RECEIVER packet 4 is outside the receive window 2 to 2, discarded
+  90.000 ms  RECEIVER sends ACK (RN=2, seq=-1), ACK is LOST
   91.000 ms  RECEIVER packet 5 is in ERROR, discarded, no ACK
- 101.000 ms  SENDER   timeout of packet 5 (0 outstanding packets beyond the receive window will also be resent)
+  98.000 ms  SENDER   timeout of packet 2 (3 outstanding packets beyond the receive window will also be resent)
+  98.000 ms  SENDER   retransmits packet 2
+  99.000 ms  SENDER   retransmits packet 3
+ 100.000 ms  SENDER   retransmits packet 4
  101.000 ms  SENDER   retransmits packet 5
- 107.000 ms  RECEIVER packet 5 is in ERROR, discarded, no ACK
- 117.000 ms  SENDER   timeout of packet 5 (0 outstanding packets beyond the receive window will also be resent)
+ 104.000 ms  RECEIVER packet 2 is in ERROR, discarded, no ACK
+ 105.000 ms  RECEIVER packet 3 is in ERROR, discarded, no ACK
+ 106.000 ms  RECEIVER packet 4 is in ERROR, discarded, no ACK
+ 107.000 ms  RECEIVER packet 5 is outside the receive window 2 to 2, discarded
+ 107.000 ms  RECEIVER sends ACK (RN=2, seq=-1), ACK is LOST
+ 114.000 ms  SENDER   timeout of packet 2 (3 outstanding packets beyond the receive window will also be resent)
+ 114.000 ms  SENDER   retransmits packet 2
+ 115.000 ms  SENDER   retransmits packet 3
+ 116.000 ms  SENDER   retransmits packet 4
  117.000 ms  SENDER   retransmits packet 5
- 123.000 ms  RECEIVER packet 5 is in ERROR, discarded, no ACK
- 133.000 ms  SENDER   timeout of packet 5 (0 outstanding packets beyond the receive window will also be resent)
+ 120.000 ms  RECEIVER packet 2 accepted (receive window 2 to 2)
+ 120.000 ms  RECEIVER packet 2 delivered
+ 120.000 ms  RECEIVER sends ACK (RN=3, seq=2)
+ 121.000 ms  RECEIVER packet 3 is in ERROR, discarded, no ACK
+ 122.000 ms  RECEIVER packet 4 is outside the receive window 3 to 3, discarded
+ 122.000 ms  RECEIVER sends ACK (RN=3, seq=-1), ACK is LOST
+ 123.000 ms  RECEIVER packet 5 is outside the receive window 3 to 3, discarded
+ 123.000 ms  RECEIVER sends ACK (RN=3, seq=-1), ACK is LOST
+ 125.000 ms  SENDER   receives ACK (RN=3, seq=2), send window now 3 to 6
+ 131.000 ms  SENDER   timeout of packet 3 (2 outstanding packets beyond the receive window will also be resent)
+ 131.000 ms  SENDER   retransmits packet 3
+ 132.000 ms  SENDER   retransmits packet 4
  133.000 ms  SENDER   retransmits packet 5
- 139.000 ms  RECEIVER packet 5 accepted (receive window 5 to 5)
- 139.000 ms  RECEIVER packet 5 delivered
- 139.000 ms  RECEIVER sends ACK (RN=6, seq=5)
- 144.000 ms  SENDER   receives ACK (RN=6, seq=5), send window now 6 to 9
- 144.000 ms  SENDER   transfer complete
+ 137.000 ms  RECEIVER packet 3 accepted (receive window 3 to 3)
+ 137.000 ms  RECEIVER packet 3 delivered
+ 137.000 ms  RECEIVER sends ACK (RN=4, seq=3), ACK is LOST
+ 138.000 ms  RECEIVER packet 4 is in ERROR, discarded, no ACK
+ 139.000 ms  RECEIVER packet 5 is outside the receive window 4 to 4, discarded
+ 139.000 ms  RECEIVER sends ACK (RN=4, seq=-1), ACK is LOST
+ 147.000 ms  SENDER   timeout of packet 3 (2 outstanding packets beyond the receive window will also be resent)
+ 147.000 ms  SENDER   retransmits packet 3
+ 148.000 ms  SENDER   retransmits packet 4
+ 149.000 ms  SENDER   retransmits packet 5
+ 153.000 ms  RECEIVER packet 3 is in ERROR, discarded, no ACK
+ 154.000 ms  RECEIVER packet 4 accepted (receive window 4 to 4)
+ 154.000 ms  RECEIVER packet 4 delivered
+ 154.000 ms  RECEIVER sends ACK (RN=5, seq=4), ACK is LOST
+ 155.000 ms  RECEIVER packet 5 is in ERROR, discarded, no ACK
+ 163.000 ms  SENDER   timeout of packet 3 (2 outstanding packets beyond the receive window will also be resent)
+ 163.000 ms  SENDER   retransmits packet 3
+ 164.000 ms  SENDER   retransmits packet 4
+ 165.000 ms  SENDER   retransmits packet 5
+ 169.000 ms  RECEIVER packet 3 is a duplicate, discarded
+ 169.000 ms  RECEIVER sends ACK (RN=5, seq=3), ACK is LOST
+ 170.000 ms  RECEIVER packet 4 is in ERROR, discarded, no ACK
+ 171.000 ms  RECEIVER packet 5 is in ERROR, discarded, no ACK
+ 179.000 ms  SENDER   timeout of packet 3 (2 outstanding packets beyond the receive window will also be resent)
+ 179.000 ms  SENDER   retransmits packet 3
+ 180.000 ms  SENDER   retransmits packet 4
+ 181.000 ms  SENDER   retransmits packet 5
+ 185.000 ms  RECEIVER packet 3 is a duplicate, discarded
+ 185.000 ms  RECEIVER sends ACK (RN=5, seq=3), ACK is LOST
+ 186.000 ms  RECEIVER packet 4 is in ERROR, discarded, no ACK
+ 187.000 ms  RECEIVER packet 5 accepted (receive window 5 to 5)
+ 187.000 ms  RECEIVER packet 5 delivered
+ 187.000 ms  RECEIVER sends ACK (RN=6, seq=5), ACK is LOST
+ 195.000 ms  SENDER   timeout of packet 3 (2 outstanding packets beyond the receive window will also be resent)
+ 195.000 ms  SENDER   retransmits packet 3
+ 196.000 ms  SENDER   retransmits packet 4
+ 197.000 ms  SENDER   retransmits packet 5
+ 201.000 ms  RECEIVER packet 3 is a duplicate, discarded
+ 201.000 ms  RECEIVER sends ACK (RN=6, seq=3), ACK is LOST
+ 202.000 ms  RECEIVER packet 4 is a duplicate, discarded
+ 202.000 ms  RECEIVER sends ACK (RN=6, seq=4), ACK is LOST
+ 203.000 ms  RECEIVER packet 5 is in ERROR, discarded, no ACK
+ 211.000 ms  SENDER   timeout of packet 3 (2 outstanding packets beyond the receive window will also be resent)
+ 211.000 ms  SENDER   retransmits packet 3
+ 212.000 ms  SENDER   retransmits packet 4
+ 213.000 ms  SENDER   retransmits packet 5
+ 217.000 ms  RECEIVER packet 3 is a duplicate, discarded
+ 217.000 ms  RECEIVER sends ACK (RN=6, seq=3), ACK is LOST
+ 218.000 ms  RECEIVER packet 4 is a duplicate, discarded
+ 218.000 ms  RECEIVER sends ACK (RN=6, seq=4)
+ 219.000 ms  RECEIVER packet 5 is a duplicate, discarded
+ 219.000 ms  RECEIVER sends ACK (RN=6, seq=5)
+ 223.000 ms  SENDER   receives ACK (RN=6, seq=4), send window now 6 to 9
+ 223.000 ms  SENDER   transfer complete
 
-Completion time = 144.000 ms, transmission attempts per packet = 4.333
+Completion time = 223.000 ms, transmission attempts per packet = 8.667
 
 
-SR: Ws = 4, Wr = 4, pd = 0.5, pa = 0.5, timeout = 15 ms, 6 packets, seed = 400000000
+SR: Ws = 4, Wr = 4, pd = 0.5, pa = 0.5, timeout = 15 ms, 6 packets, seed = 400435085
 
    0.000 ms  SENDER   transmits new packet 0 (send window 0 to 3)
    1.000 ms  SENDER   transmits new packet 1 (send window 0 to 3)
@@ -307,7 +357,8 @@ SR: Ws = 4, Wr = 4, pd = 0.5, pa = 0.5, timeout = 15 ms, 6 packets, seed = 40000
    3.000 ms  SENDER   transmits new packet 3 (send window 0 to 3)
    6.000 ms  RECEIVER packet 0 is in ERROR, discarded, no ACK
    7.000 ms  RECEIVER packet 1 is in ERROR, discarded, no ACK
-   8.000 ms  RECEIVER packet 2 is in ERROR, discarded, no ACK
+   8.000 ms  RECEIVER packet 2 accepted (receive window 0 to 3)
+   8.000 ms  RECEIVER sends ACK (RN=0, seq=2), ACK is LOST
    9.000 ms  RECEIVER packet 3 accepted (receive window 0 to 3)
    9.000 ms  RECEIVER sends ACK (RN=0, seq=3)
   14.000 ms  SENDER   receives ACK (RN=0, seq=3), send window now 0 to 3
@@ -319,62 +370,39 @@ SR: Ws = 4, Wr = 4, pd = 0.5, pa = 0.5, timeout = 15 ms, 6 packets, seed = 40000
   18.000 ms  SENDER   retransmits packet 2
   22.000 ms  RECEIVER packet 0 is in ERROR, discarded, no ACK
   23.000 ms  RECEIVER packet 1 is in ERROR, discarded, no ACK
-  24.000 ms  RECEIVER packet 2 is in ERROR, discarded, no ACK
+  24.000 ms  RECEIVER packet 2 is a duplicate, discarded
+  24.000 ms  RECEIVER sends ACK (RN=0, seq=2)
+  29.000 ms  SENDER   receives ACK (RN=0, seq=2), send window now 0 to 3
   32.000 ms  SENDER   timeout of packet 0 (0 outstanding packets beyond the receive window will also be resent)
   32.000 ms  SENDER   retransmits packet 0
   33.000 ms  SENDER   timeout of packet 1 (0 outstanding packets beyond the receive window will also be resent)
   33.000 ms  SENDER   retransmits packet 1
-  34.000 ms  SENDER   timeout of packet 2 (0 outstanding packets beyond the receive window will also be resent)
-  34.000 ms  SENDER   retransmits packet 2
-  38.000 ms  RECEIVER packet 0 accepted (receive window 0 to 3)
-  38.000 ms  RECEIVER packet 0 delivered
-  38.000 ms  RECEIVER sends ACK (RN=1, seq=0)
-  39.000 ms  RECEIVER packet 1 accepted (receive window 1 to 4)
-  39.000 ms  RECEIVER packet 1 delivered
-  39.000 ms  RECEIVER sends ACK (RN=2, seq=1), ACK is LOST
-  40.000 ms  RECEIVER packet 2 accepted (receive window 2 to 5)
-  40.000 ms  RECEIVER packet 2 delivered
-  40.000 ms  RECEIVER packet 3 delivered
-  40.000 ms  RECEIVER sends ACK (RN=4, seq=2)
-  43.000 ms  SENDER   receives ACK (RN=1, seq=0), send window now 1 to 4
-  43.000 ms  SENDER   transmits new packet 4 (send window 1 to 4)
-  45.000 ms  SENDER   receives ACK (RN=4, seq=2), send window now 4 to 7
-  45.000 ms  SENDER   transmits new packet 5 (send window 4 to 7)
-  49.000 ms  RECEIVER packet 4 is in ERROR, discarded, no ACK
-  51.000 ms  RECEIVER packet 5 is in ERROR, discarded, no ACK
-  59.000 ms  SENDER   timeout of packet 4 (0 outstanding packets beyond the receive window will also be resent)
-  59.000 ms  SENDER   retransmits packet 4
-  61.000 ms  SENDER   timeout of packet 5 (0 outstanding packets beyond the receive window will also be resent)
-  61.000 ms  SENDER   retransmits packet 5
-  65.000 ms  RECEIVER packet 4 is in ERROR, discarded, no ACK
-  67.000 ms  RECEIVER packet 5 accepted (receive window 4 to 7)
-  67.000 ms  RECEIVER sends ACK (RN=4, seq=5), ACK is LOST
-  75.000 ms  SENDER   timeout of packet 4 (0 outstanding packets beyond the receive window will also be resent)
-  75.000 ms  SENDER   retransmits packet 4
-  77.000 ms  SENDER   timeout of packet 5 (0 outstanding packets beyond the receive window will also be resent)
-  77.000 ms  SENDER   retransmits packet 5
-  81.000 ms  RECEIVER packet 4 is in ERROR, discarded, no ACK
-  83.000 ms  RECEIVER packet 5 is a duplicate, discarded
-  83.000 ms  RECEIVER sends ACK (RN=4, seq=5), ACK is LOST
-  91.000 ms  SENDER   timeout of packet 4 (0 outstanding packets beyond the receive window will also be resent)
-  91.000 ms  SENDER   retransmits packet 4
-  93.000 ms  SENDER   timeout of packet 5 (0 outstanding packets beyond the receive window will also be resent)
-  93.000 ms  SENDER   retransmits packet 5
-  97.000 ms  RECEIVER packet 4 is in ERROR, discarded, no ACK
-  99.000 ms  RECEIVER packet 5 is in ERROR, discarded, no ACK
- 107.000 ms  SENDER   timeout of packet 4 (0 outstanding packets beyond the receive window will also be resent)
- 107.000 ms  SENDER   retransmits packet 4
- 109.000 ms  SENDER   timeout of packet 5 (0 outstanding packets beyond the receive window will also be resent)
- 109.000 ms  SENDER   retransmits packet 5
- 113.000 ms  RECEIVER packet 4 accepted (receive window 4 to 7)
- 113.000 ms  RECEIVER packet 4 delivered
- 113.000 ms  RECEIVER packet 5 delivered
- 113.000 ms  RECEIVER sends ACK (RN=6, seq=4)
- 115.000 ms  RECEIVER packet 5 is a duplicate, discarded
- 115.000 ms  RECEIVER sends ACK (RN=6, seq=5), ACK is LOST
- 118.000 ms  SENDER   receives ACK (RN=6, seq=4), send window now 6 to 9
- 118.000 ms  SENDER   transfer complete
+  38.000 ms  RECEIVER packet 0 is in ERROR, discarded, no ACK
+  39.000 ms  RECEIVER packet 1 is in ERROR, discarded, no ACK
+  48.000 ms  SENDER   timeout of packet 0 (0 outstanding packets beyond the receive window will also be resent)
+  48.000 ms  SENDER   retransmits packet 0
+  49.000 ms  SENDER   timeout of packet 1 (0 outstanding packets beyond the receive window will also be resent)
+  49.000 ms  SENDER   retransmits packet 1
+  54.000 ms  RECEIVER packet 0 accepted (receive window 0 to 3)
+  54.000 ms  RECEIVER packet 0 delivered
+  54.000 ms  RECEIVER sends ACK (RN=1, seq=0), ACK is LOST
+  55.000 ms  RECEIVER packet 1 accepted (receive window 1 to 4)
+  55.000 ms  RECEIVER packet 1 delivered
+  55.000 ms  RECEIVER packet 2 delivered
+  55.000 ms  RECEIVER packet 3 delivered
+  55.000 ms  RECEIVER sends ACK (RN=4, seq=1)
+  60.000 ms  SENDER   receives ACK (RN=4, seq=1), send window now 4 to 7
+  60.000 ms  SENDER   transmits new packet 4 (send window 4 to 7)
+  61.000 ms  SENDER   transmits new packet 5 (send window 4 to 7)
+  66.000 ms  RECEIVER packet 4 accepted (receive window 4 to 7)
+  66.000 ms  RECEIVER packet 4 delivered
+  66.000 ms  RECEIVER sends ACK (RN=5, seq=4), ACK is LOST
+  67.000 ms  RECEIVER packet 5 accepted (receive window 5 to 8)
+  67.000 ms  RECEIVER packet 5 delivered
+  67.000 ms  RECEIVER sends ACK (RN=6, seq=5)
+  72.000 ms  SENDER   receives ACK (RN=6, seq=5), send window now 6 to 9
+  72.000 ms  SENDER   transfer complete
 
-Completion time = 118.000 ms, transmission attempts per packet = 3.333
+Completion time = 72.000 ms, transmission attempts per packet = 2.167
 
 
