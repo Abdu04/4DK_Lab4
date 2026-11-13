@@ -30,7 +30,7 @@ STYLE = {
     "GBN":      dict(marker="s", color="tab:red"),
     "SR Wr=2":  dict(marker="^", color="tab:green"),
     "SR Wr=8":  dict(marker="D", color="tab:orange"),
-    "SR Wr=Ws": dict(marker="o", color="tab:blue"),
+    "SR Wr=16": dict(marker="o", color="tab:blue"),
 }
 
 EFFICIENCY = ("efficiency", "Link efficiency")
@@ -105,7 +105,7 @@ def part2_analysis(ax):
 def part3a_analysis(ax):
     pd = [i / 200 for i in range(101)]
     ax.plot(pd, [1 - p for p in pd], "--", color="tab:blue", linewidth=1,
-            label="Analysis, ideal SR: 1 - pd")
+            label="Analysis, ideal SR (Wr = Ws): 1 - pd")
     ax.plot(pd, [(1 - p) / (1 + p * TIMEOUT / T_XMT) for p in pd], "--",
             color="tab:red", linewidth=1,
             label="Analysis, GBN: (1 - pd) / (1 + pd Tout / Tx)")

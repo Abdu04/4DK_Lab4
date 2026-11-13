@@ -55,8 +55,10 @@
  * Experiment parameters (Section 2 of the lab).
  */
 
-/* Receive window sizes used for the SR curves. 0 means Wr = Ws. */
-#define SR_WR_LIST 2, 8, 0
+/* Receive window sizes used for the SR curves. 0 means Wr = Ws. 16 is the
+   number of packets sent from the start of a lost packet to its timeout
+   (Tx time + timeout), so one loss never overflows the receive window. */
+#define SR_WR_LIST 2, 8, 16
 
 /* Send window used when Ws is held fixed (Parts 3(a), 4 and 5). It is
    larger than FULL_UTILIZATION_WS, and also large enough that the SR send
